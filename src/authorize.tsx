@@ -1,7 +1,7 @@
 let client_id = '';
 let client_secret = '';
 
-async function getToken() {
+ async function getToken() {
   const response = await fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
     body: new URLSearchParams({
@@ -16,6 +16,4 @@ async function getToken() {
   return await response.json();
 }
 
-getToken().then((response) => {
-  console.log(response)
-});
+export default getToken();
